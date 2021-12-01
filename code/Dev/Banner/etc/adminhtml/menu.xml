@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Dev_Banner::catalog_products" title="Products Banner" translate="title" module="Dev_Banner" sortOrder="10" parent="Magento_Catalog::inventory" action="banner/banner/index/" resource="Magento_Catalog::products"/>
+        <add id="Dev_Banner::helloworld" title="Hello World" module="Dev_Banner" sortOrder="51" resource="Dev_Banner::helloworld"/>
+        <add id="Dev_Banner::index" title="Manage Posts" module="Dev_Banner" sortOrder="10" action="banner/banner/index" resource="Dev_Banner::post" parent="Dev_Banner::helloworld"/>
+        <add id="Dev_Banner::hello_configuration" title="Configuration" module="Dev_Banner" sortOrder="99" parent="Dev_Banner::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Dev_Banner::helloworld_configuration"/>
+    </menu>
+</config>

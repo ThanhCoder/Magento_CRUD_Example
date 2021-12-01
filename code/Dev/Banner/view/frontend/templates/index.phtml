@@ -1,0 +1,47 @@
+<?php
+/** @var \Dev\Banner\Block\Template $block */
+
+//var_dump($block->getData());
+
+?>
+
+<div class="template">
+    <h1><?=$block->getName()?></h1>
+</div>
+
+<h2>hello</h2>
+
+
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.post-id{width:2%} .post-name{width:30%}
+
+</style>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>ProductBanner</th>
+    <th>Status</th>
+  </tr>
+    <?php
+        foreach ($block->getPostCollection() as $key=>$post){
+            echo '<tr>
+                    <td>'.$post->getBannerId().'</td>
+                    <td>'.$post->getName().'</td>
+                    <td>'.$post->getDescription().'</td>
+                    <td>'.$post->getImage().'</td>
+                    <td>'.$post->getProductBanner().'</td>
+                    <td>'.$post->getStatus().'</td>
+                  </tr>';
+        }
+    ?>
+</table>
+
+</body>
+</html>
